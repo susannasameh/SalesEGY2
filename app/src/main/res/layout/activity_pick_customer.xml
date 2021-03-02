@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PickCustomerActivity"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    android:background="@drawable/backgrad">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_15sdp"
+        android:background="@drawable/backgrad"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/assistant_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_button"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:text="Scan "
+            android:onClick="onQR"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            tools:ignore="RtlCompat" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvQr_text"
+            android:text=""
+            android:textColor="@color/newcolor"
+            android:visibility="gone"
+            />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--  <ImageView
+                  android:id="@+id/imageView3"
+                  android:layout_width="@dimen/_50sdp"
+                  android:layout_height="@dimen/_50sdp"
+                  android:layout_gravity="right"
+                  app:srcCompat="@mipmap/lmsalogo" />-->
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:layout_gravity="right"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_24sdp"
+                    android:id="@+id/et_searchByName"
+                    android:hint="@string/search_by_name"
+                    android:background="@drawable/edit_text_top"
+                    android:gravity="center"
+
+                    android:textColorHint="@android:color/darker_gray"
+                    />
+                <EditText
+                    android:background="@drawable/edit_text_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_24sdp"
+                    android:id="@+id/et_searchByZone"
+                    android:hint="@string/search_by_zone"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:gravity="center"
+
+                    />
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="  جمله  "
+                    android:textDirection="locale"
+                    android:textColor="@android:color/darker_gray"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <Button
+                    android:id="@+id/btnQR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:background="@drawable/login_button"
+                    android:onClick="onQR"
+                    android:text="@string/scan"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"/>
+
+                <Button
+                    android:id="@+id/btnCustList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:background="@drawable/login_button"
+                    android:visibility="gone"
+                    android:onClick="onCustList"
+                    android:text="@string/select"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnVisit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_43sdp"
+                android:text="@string/selected_customer"
+                android:background="@drawable/login_button"
+                android:textColor="@android:color/white"
+                android:enabled="false"
+                android:onClick="onVisit"
+                android:visibility="gone"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/newcolor"
+                    android:onClick="onAllCustomers"
+                    android:padding="10dp"
+                    android:text="@string/all_customer"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:visibility="gone"
+                    android:textColor="@color/newcolor"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/newcolor"
+                    android:onClick="onRouteCustomers"
+                    android:padding="@dimen/_10sdp"
+                    android:text="@string/rout_customer"
+                    android:textAllCaps="false"
+                    android:visibility="gone"
+                    android:textColor="@color/whiteBackGround" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/inner_border">
+                <ListView
+                    android:id="@+id/listView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:choiceMode="singleChoice"
+                    android:listSelector="@android:color/darker_gray"
+                    android:background="@android:color/white"
+                    />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnFinishVisit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Button"
+                android:background="@color/newcolor"
+                android:textColor="@android:color/white"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

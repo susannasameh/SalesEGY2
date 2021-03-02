@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewCustomerActivity"
+    android:background="@drawable/backgrad"
+    android:orientation="vertical">
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_400sdp"
+      android:background="@android:color/white"
+      android:orientation="vertical"
+      android:padding="@dimen/_15sdp"
+      android:layout_margin="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+      <TextView
+          android:id="@+id/newcuscategoury"
+          android:layout_width="@dimen/_290sdp"
+          android:layout_height="wrap_content"
+          android:layout_gravity="left"
+          android:background="@drawable/raduis_header_white"
+          android:paddingTop="@dimen/_12sdp"
+          android:text="@string/customer_categoury_retail"
+          android:textAlignment="center"
+          android:textColor="@color/newcolor"
+          android:textSize="@dimen/_20sdp"
+          tools:ignore="RtlCompat"
+          android:textStyle="bold"/>
+<!--      <ImageView-->
+<!--          android:id="@+id/imageView3"-->
+<!--          android:layout_width="@dimen/_50sdp"-->
+<!--          android:layout_height="@dimen/_50sdp"-->
+<!--          android:layout_gravity="right"-->
+<!--          app:srcCompat="@mipmap/lmsalogo" />-->
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/_11sdp">
+
+
+
+      <Button
+          android:id="@+id/btnSaveCust"
+          android:layout_width="@dimen/_114sdp"
+          android:layout_height="@dimen/_50sdp"
+          android:layout_marginStart="@dimen/_100sdp"
+          android:layout_marginTop="@dimen/_10sdp"
+          android:layout_marginBottom="@dimen/_10sdp"
+          android:background="@drawable/raduis_button"
+          android:layout_gravity="center"
+          android:onClick="onContinueVisit"
+          android:text="@string/save_customer"
+          android:textAllCaps="false"
+          android:textColor="@android:color/white"
+          android:gravity="center"
+          tools:ignore="RtlCompat" />
+
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <LinearLayout
+          android:id="@+id/dataLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:layout_margin="@dimen/_5sdp"
+          >
+
+        <EditText
+            android:id="@+id/etCustName"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:gravity="fill_horizontal"
+            android:hint="@string/customer_name"
+            android:inputType="textPersonName"
+            android:textAllCaps="false"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"/>
+
+        <EditText
+            android:id="@+id/etCustNameAR"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_name_ar"
+            android:inputType="textPersonName"
+            android:enabled="false"
+            android:textAllCaps="false"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"/>
+
+        <EditText
+            android:id="@+id/etCustCategory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/Customer_category"
+            android:inputType="textPersonName"
+            android:enabled="false"
+            android:textAllCaps="false"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"/>
+        <EditText
+            android:id="@+id/etCustCreditLimit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_credit_limit"
+            android:inputType="textPersonName"
+            android:enabled="false"
+            android:textAllCaps="false"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"/>
+        <EditText
+            android:id="@+id/etCustCreditType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_credit_type"
+            android:inputType="textPersonName"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"/>
+
+        <EditText
+            android:id="@+id/etCustAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_address"
+            android:inputType="textPersonName"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"/>
+
+
+
+        <EditText
+            android:id="@+id/etCustCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_zone"
+            android:inputType="textPersonName"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"/>
+
+        <EditText
+            android:id="@+id/etCustCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_city"
+            android:textColorHint="@color/newcolor"
+            android:inputType="textPersonName"
+            android:textColor="@color/newcolor"/>
+        <EditText
+            android:id="@+id/etCustContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_contact_name"
+            android:inputType="textPersonName"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"/>
+
+        <EditText
+            android:id="@+id/etCustContactphone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_contact_phone"
+            android:inputType="phone"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+          <ImageButton
+              android:layout_margin="@dimen/_2sdp"
+              android:id="@+id/btnGetCustomerLocation"
+              android:layout_width="@dimen/_26sdp"
+              android:layout_height="match_parent"
+              app:srcCompat="@android:drawable/ic_menu_mylocation" />
+
+          <EditText
+              android:id="@+id/etCustLocation"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:ems="10"
+              android:enabled="false"
+              android:hint="@string/customer_location"
+              android:inputType="textPersonName"
+              android:textColor="@color/newcolor"
+              android:textColorHint="@color/newcolor"/>
+
+        </LinearLayout>
+
+
+
+        <EditText
+            android:id="@+id/etCustContactWebsite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_website"
+            android:inputType="textWebEditText"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"/>
+
+        <EditText
+            android:id="@+id/etCustContactemail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_contact_email"
+            android:inputType="textEmailAddress"
+
+            android:textColorHint="@color/newcolor"/>
+
+        <EditText
+            android:id="@+id/etCustphon1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_phone_1"
+            android:inputType="phone"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"/>
+
+        <EditText
+            android:id="@+id/etCustphon2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_phone_2"
+            android:inputType="phone"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"/>
+
+        <EditText
+            android:id="@+id/etCustphon3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_phone_3"
+            android:inputType="phone"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"
+            />
+
+        <EditText
+            android:id="@+id/etCustDisc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/customer_discount"
+            android:inputType="numberDecimal"
+            android:textColor="@color/newcolor"
+            android:textColorHint="@color/newcolor"
+            />
+
+
+      </LinearLayout>
+
+
+
+    </ScrollView>
+
+  </LinearLayout>
+  <Button
+      android:id="@+id/btnNewCust"
+      android:layout_width="@dimen/_100sdp"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:background="@drawable/raduis_button"
+      android:gravity="center"
+      android:onClick="onNewCust"
+      android:text="@string/new_cust"
+      android:textAllCaps="false"
+      android:textColor="@android:color/white" />
+
+
+
+</LinearLayout>
