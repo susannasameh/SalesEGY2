@@ -15,5 +15,9 @@ class DashBoardActivity : AppCompatActivity() {
                 val intent = Intent(this, PickCustomerActivity::class.java)
                 startActivity(intent)
             }
+        cardNewCustomerRetail.setOnClickListener{
+            val intent1 = Intent(this,NewCustomerActivity1::class.java)
+            startActivity(intent1)
+        }
     }
 }

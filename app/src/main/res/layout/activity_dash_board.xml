@@ -350,8 +350,7 @@
                     android:id="@+id/newcustomerretailTV"
                     android:layout_width="@dimen/_100sdp"
                     android:layout_height="@dimen/_30sdp"
-                    android:text="New Customer
-                        Retail"
+                    android:text="New Customer Retail"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:textColor="@color/textcardColor"

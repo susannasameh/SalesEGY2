@@ -8,102 +8,108 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "customer_table")
-class Customer (
-    @NonNull
+data class Customer(
+        @NonNull
     @PrimaryKey(autoGenerate = false)
     @ColumnInfo( name="customer_id")
     @SerializedName("customer_id")
-    var customerId: String  ="",
+        var customerId: Int ,
 
-    @NonNull
+        @NonNull
     @ColumnInfo( name="customer_name")
     @SerializedName("customer_name")
-    var customerName: String ="",
+        var customerName: String ="",
 
-    @Nullable
+        @NonNull
     @ColumnInfo( name="customer_name_ar")
     @SerializedName("customer_name_ar")
-    var customerNameAr: String  ="",
+        var customerNameAr: String  ="",
 
-    @Nullable
+        @NonNull
     @ColumnInfo( name="customer_location")
     @SerializedName("customer_location")
-    var customerLocation: String ="",
+        var customerLocation: String ="",
 
-    @Nullable
+        @NonNull
     @ColumnInfo( name="customer_credit_limit")
     @SerializedName("customer_credit_limit")
-    var customerCreditLimit: String  ="",
+        var customerCreditLimit: String  ="",
 
-    @Nullable
+        @NonNull
     @ColumnInfo( name="customer_credit_type")
     @SerializedName("customer_credit_type")
-    var customerCreditType: String  ="",
+        var customerCreditType: String  ="",
 
 
-    @Nullable
+        @NonNull
     @ColumnInfo( name="customer_credit_days")
     @SerializedName("customer_credit_days")
-    var customerCreditDays: String  ="",
+        var customerCreditDays: String  ="",
 
-    @Nullable
+        @Nullable
     @ColumnInfo( name="customer_address")
     @SerializedName("customer_address")
-    var customerAddress: String  ="",
+        var customerAddress: String  ="",
 
-    @Nullable
+        @Nullable
     @ColumnInfo( name="customer_country")
     @SerializedName("customer_country")
-    var customerCountry: String ="",
+        var customerCountry: String ="",
 
-    @Nullable
+        @Nullable
     @ColumnInfo( name="customer_city")
     @SerializedName("customer_city")
-    var customerCity: String ="",
+        var customerCity: String ="",
 
-@Nullable
+        @Nullable
 @ColumnInfo( name="customer_zone")
 @SerializedName("customer_zone")
-var customerZone: String ="",
+        var customerZone: String ="",
 
-@Nullable
+        @Nullable
 @ColumnInfo( name="customer_contact_name")
 @SerializedName("customer_contact_name")
-var customerContactName: String ="",
+        var customerContactName: String ="",
 
-@Nullable
+        @Nullable
 @ColumnInfo( name="customer_phone")
 @SerializedName("customer_phone")
-var customerPhone: String ="",
+        var customerPhone: String ="",
 
-@Nullable
+        @Nullable
 @ColumnInfo( name="customer_cellphone")
 @SerializedName("customer_cellphone")
-var customerCellphone: String ="",
-    @Nullable
+        var customerCellphone: String ="",
+        @Nullable
     @ColumnInfo( name="customer_contact_phone")
     @SerializedName("customer_contact_phone")
-    var customerContactPhone: String ="",
-    @Nullable
+        var customerContactPhone: String ="",
+        @Nullable
     @ColumnInfo( name="customer_contact_cellphone")
     @SerializedName("customer_contact_cellphone")
-    var customerContactCellphone: String ="",
-    @Nullable
+        var customerContactCellphone: String ="",
+        @Nullable
     @ColumnInfo( name="customer_contact_email")
     @SerializedName("customer_contact_email")
-    var customerContactEmail: String ="",
-    @Nullable
+        var customerContactEmail: String ="",
+        @NonNull
     @ColumnInfo( name="sync_status")
     @SerializedName("sync_status")
-    var syncStatus: String ="",
-    @Nullable
+        var syncStatus: String ="",
+        @NonNull
     @ColumnInfo( name="rep_customer_id")
     @SerializedName("rep_customer_id")
-    var repCustomerId: String =""
+        var repCustomerId: String ="",
+
+        @NonNull
+@ColumnInfo( name="customer_server_id")
+@SerializedName("customer_server_id")
+        var customerServerId: String =""
+
 
 )
 {
-    constructor() : this("",
+    constructor() : this(0,
         "","","","",""
         ,"" ,"" , "","" ,"",""
     ,"","","","","","","")

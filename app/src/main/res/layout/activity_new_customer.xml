@@ -268,16 +268,7 @@
             android:textColorHint="@color/newcolor"
             />
 
-        <EditText
-            android:id="@+id/etCustDisc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="@string/customer_discount"
-            android:inputType="numberDecimal"
-            android:textColor="@color/newcolor"
-            android:textColorHint="@color/newcolor"
-            />
+
 
 
       </LinearLayout>

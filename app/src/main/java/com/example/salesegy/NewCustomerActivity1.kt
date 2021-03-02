@@ -1,18 +1,22 @@
+package com.example.salesegy
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.salesegy.R
+import com.example.salesegy.database.RoomAppDB
+import com.example.salesegy.model.Customer
+import kotlinx.android.synthetic.main.activity_new_customer1.*
 
-class NewCustomerActivity:AppCompatActivity(){
+class NewCustomerActivity1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_new_customer)
-       // saveDatainRoomDb()
+        setContentView(R.layout.activity_new_customer1)
+         saveDatainRoomDb()
 
     }
-  /*  fun saveDatainRoomDb(){
+    fun saveDatainRoomDb(){
         btnSaveCust.setOnClickListener {
-          val customername = etCustName.text.toString()
+            val customername = etCustName.text.toString()
             val customernamear = etCustNameAR.text.toString()
             val customercategory = etCustCategory.text.toString()
             val customercreditlimit = etCustCreditLimit.text.toString()
@@ -30,12 +34,12 @@ class NewCustomerActivity:AppCompatActivity(){
             val customerphone3 = etCustphon3.text.toString()
             val customerDao = RoomAppDB.getAppDatabase(this)?.customerDao()
             val customerEntity = Customer(0,customername,customernamear,customercategory,customercreditlimit,customercredittype,customeraddres,customercountry,
-            customercity,customercontact,customercontactphone,customerloction,customercontactwebsite,customercontactemail,
-            customerphone1,customerphone2,customerphone3)
+                    customercity,customercontact,customercontactphone,customerloction,customercontactwebsite,customercontactemail,
+                    customerphone1,customerphone2,customerphone3)
             val customerId= customerDao?.insertCustomer(customerEntity)
-          //  startActivity(Intent(this@NewCustomerActivity,PickCustomerActivity::class.java))
+              startActivity(Intent(this@NewCustomerActivity1,PickCustomerActivity::class.java))
 
 
-        }*/
-    //}
+        }
+        }
 }
